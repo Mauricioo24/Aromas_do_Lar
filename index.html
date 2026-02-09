@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromas do Lar - Catálogo de Velas Aromáticas e Religiosas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <h1 class="logo">Aromas do Lar</h1>
+                <div class="nav-links">
+                    <a href="#inicio" class="nav-link">Início</a>
+                    <a href="#catalogo" class="nav-link">Catálogo</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Página Inicial -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Bem-vindo à Aromas do Lar</h2>
+                <p class="hero-text">
+                    Criamos velas aromáticas e velas religiosas com cuidado artesanal, 
+                    pensadas para trazer calma, acolhimento e espiritualidade ao seu lar. 
+                    Cada produto é feito com dedicação e materiais selecionados, 
+                    para que você possa transformar seus momentos em experiências especiais.
+                </p>
+                <a href="#catalogo" class="btn-primary">Conheça nossos produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="catalogo" class="catalogo">
+        <div class="container">
+            <h2 class="section-title">Nosso Catálogo</h2>
+            <p class="section-subtitle">Explore nossa seleção cuidadosa de velas aromáticas e religiosas</p>
+
+            <!-- Filtros de Categoria -->
+            <div class="categoria-filtros">
+                <button class="filtro-btn active" data-categoria="todos">Todos os Produtos</button>
+                <button class="filtro-btn" data-categoria="aromaticas">Velas Aromáticas</button>
+                <button class="filtro-btn" data-categoria="religiosas">Velas Religiosas</button>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="produtos-grid" id="produtos-grid">
+                <!-- Os produtos serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Estamos prontos para ajudar você a encontrar o produto perfeito</p>
+            <div class="contato-opcoes">
+                <a href="https://wa.me/5511995618384?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Aromas%20do%20Lar." 
+                   class="btn-contato whatsapp" target="_blank" rel="noopener noreferrer">
+                    <span class="contato-icon"><img src="imagens/whatsapp-icon-free-png.webp" alt="WhatsApp" width="30" height="30"></span>
+                    <span class="contato-text">
+                        <strong>WhatsApp</strong>
+                        <small>Fale conosco agora</small>
+                    </span>
+                </a>
+                <a href="https://www.instagram.com/aromassdolar/" 
+                   class="btn-contato instagram" target="_blank" rel="noopener noreferrer">
+                    <span class="contato-icon"><img src="imagens/image.png" alt="Instagram" width="30" height="30"></span>
+                    <span class="contato-text">
+                        <strong>Instagram</strong>
+                        <small>Veja mais fotos</small>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 Aromas do Lar. Todos os direitos reservados.</p>
+            <p class="footer-text">Produtos artesanais feitos com carinho e dedicação.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
