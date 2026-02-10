@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromas do Lar - Detalhes do Produto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html#inicio" class="logo" style="text-decoration: none;">Aromas do Lar</a>
+                <div class="nav-links">
+                    <a href="index.html#inicio" class="nav-link">Início</a>
+                    <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+                    <a href="index.html#contato" class="nav-link">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detalhes do Produto -->
+    <section class="produto-detalhe-section">
+        <div class="container">
+            <div class="produto-detalhe-voltar">
+                <a href="index.html#catalogo">← Voltar ao catálogo</a>
+            </div>
+
+            <div id="produto-detalhe" class="produto-detalhe">
+                <div class="produto-detalhe-imagens">
+                    <div class="carrossel">
+                        <button class="carrossel-controle carrossel-controle-esquerda" type="button" aria-label="Imagem anterior" id="carrossel-anterior">‹</button>
+                        <div class="carrossel-janela">
+                            <img id="produto-detalhe-imagem-principal" src="" alt="Produto" loading="lazy">
+                        </div>
+                        <button class="carrossel-controle carrossel-controle-direita" type="button" aria-label="Próxima imagem" id="carrossel-proximo">›</button>
+                    </div>
+                    <div class="carrossel-miniaturas" id="carrossel-miniaturas">
+                        <!-- Miniaturas das imagens serão inseridas aqui via JavaScript -->
+                    </div>
+                </div>
+
+                <div class="produto-detalhe-info">
+                    <span id="produto-detalhe-categoria" class="produto-categoria"></span>
+                    <h1 id="produto-detalhe-nome" class="produto-nome"></h1>
+                    <p id="produto-detalhe-descricao" class="produto-descricao"></p>
+                    <p id="produto-detalhe-valor" class="produto-valor"></p>
+
+                    <a id="produto-detalhe-whatsapp" href="#" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 Aromas do Lar. Todos os direitos reservados.</p>
+            <p class="footer-text">Produtos artesanais feitos com carinho e dedicação.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
