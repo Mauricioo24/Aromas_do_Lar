@@ -52,8 +52,8 @@ const produtos = [
         descricao: "Vela de parafina em gel, 170 ml.",
         valor: "R$ 71,90",
         imagens: [
-            "/imagens/velaC1.webp",
-            "/imagens/velaC1.webp"
+            "/imagens/VelaC1.webp",
+            "/imagens/VelaC1.webp"
         ]
     },
     {
@@ -64,7 +64,7 @@ const produtos = [
         valor: "R$ 68,90",
         imagens: [
             "/imagens/velaNS.jpg",
-            "/imagens/velaNS2.jpg"
+            "/imagens/VelaNS2.jpg"
         ]
     },
     {
