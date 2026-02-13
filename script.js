@@ -4,9 +4,9 @@
 const produtos = [
     {
         id: 1,
-        nome: "Creme de mãos",
-        categoria: "aromaticas",
-        descricao: "Creme para mãos/corpo. Aromas: cereja e avelã; flor de cerejeira; vanila.",
+        nome: "Hidratante artesanal.",
+        categoria: "corporal",
+        descricao: "Aromas: Cereja e avelã, flor de cerejeira, vanilla.",
         valor: "R$ 8,00",
         imagens: [
             "/imagens/creme1.webp",
@@ -15,8 +15,8 @@ const produtos = [
     },
     {
         id: 2,
-        nome: "Difusor de varetas (aromatizador)",
-        categoria: "aromaticas",
+        nome: "Aromatizador de ambientes",
+        categoria: "aromatizantes",
         descricao: "Vem com 5 varetas de madeira inclusas para usar. Contém: 100 ml Aromas disponíveis: Bamboo; Melancia; Flor de cerejeira; Cereja e avelã; Vanilla; Gardênia.",
         valor: "R$ 45,00",
         imagens: [
@@ -26,10 +26,10 @@ const produtos = [
     },
     {
         id: 3,
-        nome: "Kit aromatizador  e sabonete líquido",
-        categoria: "aromaticas",
-        descricao: "FBamboo; Flor de cerejeira; Cereja e avelã; Vanilla.",
-        valor: "R$ 90,00",
+        nome: "Água de lençóis 100ml",
+        categoria: "aromatizantes",
+        descricao: "Aromas: Cereja e avelã, bamboo, vanilla, chá branco, melancia.",
+        valor: "R$ 30,00",
         imagens: [
             "/imagens/Aroma1.webp",
             "/imagens/Aroma1.webp"
@@ -37,20 +37,20 @@ const produtos = [
     },
     {
         id: 4,
-        nome: "Vela Aromática Canela",
+        nome: "Vela aromatizada ",
         categoria: "aromaticas",
-        descricao: "Aroma quente e especiado de canela que traz aconchego e energia positiva ao ambiente.",
+        descricao: "Aromas: morango, cereja e avelã, flor de cerejeira, champanhe toast, cascas e folhas.",
+        valor: "R$ 30,00",
         imagens: [
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Canela+1",
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Canela+2"
+            "/imagens/aromatizada1.webp",
         ]
     },
     {
         id: 5,
-        nome: "Vela em gel",
+        nome: "Vela em gel aromatizada ",
         categoria: "aromaticas",
-        descricao: "Vela de parafina em gel, 170 ml.",
-        valor: "R$ 71,90",
+        descricao: "Vela de parafina em gel, 170 ml. Aromas: Cereja e avelã, flor de cerejeira, champanhe toast, cascas e folhas.",
+        valor: "R$ 45,00",
         imagens: [
             "/imagens/VelaC1.webp",
             "/imagens/VelaC1.webp"
@@ -59,7 +59,7 @@ const produtos = [
     {
         id: 6,
         nome: "Vela de gel Nossa Senhora",
-        categoria: "religiosas",
+        categoria: "religiosos",
         descricao: "Vela feita com parafina em gel, 170 ml. Imagem de Nossa Senhora Aparecida 🙏🏼",
         valor: "R$ 68,90",
         imagens: [
@@ -69,42 +69,102 @@ const produtos = [
     },
     {
         id: 7,
-        nome: "Vela Religiosa São Jorge",
-        categoria: "religiosas",
-        descricao: "Vela consagrada a São Jorge, símbolo de proteção e força. Ideal para pedidos de amparo e coragem.",
+        nome: "Vela oratória",
+        categoria: "religiosos",
+        descricao: "Vela oratória confeccionada com acabamento em pedras, trazendo a imagem de seu santo favorito como símbolo de fé, proteção e espiritualidade. Ideal para ambientes de oração, decoração ou para presentear.",
+        valor: "R$ 119,90",
         imagens: [
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=São+Jorge+1",
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=São+Jorge+2"
+            "/imagens/VelaNSpedra.webp",
         ]
     },
     {
         id: 8,
-        nome: "Vela Religiosa Anjo da Guarda",
-        categoria: "religiosas",
-        descricao: "Vela dedicada ao seu Anjo da Guarda, para momentos de proteção espiritual e conexão com o divino.",
+        nome: "Vela oratória com refil.",
+        categoria: "religiosos",
+        descricao: "Vela oratória refil confeccionada com acabamento em pedras, trazendo a imagem de seu santo favorito como símbolo de fé, proteção e espiritualidade. Ideal para ambientes de oração, decoração ou para presentear.",
+        valor: "R$ 89,90",
         imagens: [
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Anjo+da+Guarda+1",
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Anjo+da+Guarda+2"
+            "/imagens/VelaNSpedraRefil.webp",
         ]
     },
     {
         id: 9,
-        nome: "Vela Religiosa Sagrado Coração",
-        categoria: "religiosas",
+        nome: "Mini vela  oratória (A partir de 5 unidades)",
+        categoria: "religiosos",
         descricao: "Vela devocional do Sagrado Coração de Jesus, para momentos de devoção e busca por paz interior.",
+        valor: "R$ 14,00",
         imagens: [
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Sagrado+Coração+1",
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Sagrado+Coração+2"
+            "/imagens/VelaNSpedraMini.webp",
         ]
     },
     {
         id: 10,
-        nome: "Vela Religiosa Nossa Senhora Aparecida",
-        categoria: "religiosas",
+        nome: "Sagrada família de gesso decorada",
+        categoria: "religiosos",
         descricao: "Vela especial dedicada à padroeira do Brasil, Nossa Senhora Aparecida, para momentos de fé e gratidão.",
+        valor: "R$ 19,90",
         imagens: [
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Aparecida+1",
-            "https://via.placeholder.com/600x600/E8E4DD/6B6B6B?text=Aparecida+2"
+            "/imagens/sagradafamiliaSgesso.webp",
+        ]
+    },
+    {
+        id: 11,
+        nome: "Vela em gel São Miguel Arcanjo",
+        categoria: "religiosos",
+        descricao: "Vela de parafina em gel com imagem de São Miguel Arcanjo. Ideal para momentos de oração e proteção espiritual.",
+        valor: "R$ 71,90",
+        imagens: [
+            "/imagens/saoMiguel.webp",
+        ]
+    },
+    {
+        id: 12,
+        nome: "Refil aromatizador / água de lençóis",
+        categoria: "aromatizantes",
+        descricao: "Refil para aromatizador de ambientes ou água de lençóis. Deixe sua casa e roupas com um aroma suave e aconchegante. 100 ml R$ 30,00 - 250 ml R$ 50,00 - 500 ml R$ 90,00 - 1000 ml R$ 180,00",
+        valor: "R$ 30,00 - R$ 180,00",
+        imagens: [
+            "/imagens/aromaticasRefil.webp",
+        ]
+    },
+    {
+        id: 13,
+        nome: "Vela Bubble",
+        categoria: "aromaticas",
+        descricao: "Vela decorativa em formato bubble, perfeita para ambientar e dar um toque especial ao seu lar e que pode ser personalizada com aroma que você desejar!.",
+        valor: "R$ 12,00",
+        imagens: [
+            "/imagens/blubble.webp",
+        ]
+    },
+    {
+        id: 14,
+        nome: "Vela latinha pequena",
+        categoria: "aromaticas",
+        descricao: "Vela aromática em latinha pequena, prática e charmosa. Ideal para presentear ou decorar ambientes e que pode ser personalizada da maneira que você quiser!. R$09,00 a unidade - R$08,00 a cima de 5 unidades",
+        valor: "R$ 8,00",
+        imagens: [
+            "/imagens/velaLata.webp",
+        ]
+    },
+    {
+        id: 15,
+        nome: "Vela girassol",
+        categoria: "aromaticas",
+        descricao: "Vela decorativa com tema girassol, trazendo luz e alegria para qualquer ambiente.",
+        valor: "R$ 8,00",
+        imagens: [
+            "/imagens/velaGirassol.webp",
+        ]
+    },
+    {
+        id: 16,
+        nome: "Aromatizador de carro",
+        categoria: "aromatizantes",
+        descricao: "Aromatizador para veículos. Mantenha o interior do carro com um cheiro agradável durante suas viagens. Aromas disponíveis: Trousso; Bamboo; Flor de cerejeira; Cereja e avelã; Vanilla.",
+        valor: "R$ 15,00",
+        imagens: [
+            "/imagens/aromaCarro.webp",
         ]
     }
 ];
@@ -122,10 +182,41 @@ function abrirPaginaProduto(id) {
     window.location.href = `produto.html?id=${id}`;
 }
 
+// Função para obter nome amigável da categoria
+function obterNomeCategoria(categoria) {
+    switch (categoria) {
+        case "aromaticas":
+            return "Vela Aromáticas";
+        case "religiosos":
+            return "Artigos Religiosos";
+        case "kits":
+            return "Kits Especiais";
+        case "aromatizantes":
+            return "Aromatizantes";
+        case "corporal":
+            return "Linha Corporal";
+        default:
+            // Deixa a primeira letra maiúscula como fallback
+            return categoria
+                ? categoria.charAt(0).toUpperCase() + categoria.slice(1)
+                : "";
+    }
+}
+
+// Limite de caracteres da descrição no card (o restante aparece na página do produto)
+const LIMITE_DESCRICAO_CARD = 100;
+
+// Trunca a descrição para exibir no card; texto completo fica na página de detalhes
+function truncarDescricao(texto, maxCaracteres = LIMITE_DESCRICAO_CARD) {
+    if (!texto || typeof texto !== "string") return "";
+    const limpo = texto.replace(/\s+/g, " ").trim();
+    if (limpo.length <= maxCaracteres) return texto;
+    return limpo.slice(0, maxCaracteres).trim() + "…";
+}
+
 // Função para criar card de produto (lista do catálogo)
 function criarCardProduto(produto) {
-    const categoriaNome =
-        produto.categoria === "aromaticas" ? "Vela Aromática" : "Vela Religiosa";
+    const categoriaNome = obterNomeCategoria(produto.categoria);
     const mensagemWhatsApp = encodeURIComponent(
         `Olá! Gostaria de saber mais sobre a ${produto.nome} da Aromas do Lar.`
     );
@@ -133,6 +224,7 @@ function criarCardProduto(produto) {
     const imagemPrincipal = Array.isArray(produto.imagens)
         ? produto.imagens[0]
         : produto.imagem;
+    const descricaoResumida = truncarDescricao(produto.descricao);
 
     return `
         <div class="produto-card" data-categoria="${produto.categoria}" onclick="abrirPaginaProduto(${produto.id})">
@@ -142,7 +234,8 @@ function criarCardProduto(produto) {
             <div class="produto-info">
                 <span class="produto-categoria">${categoriaNome}</span>
                 <h3 class="produto-nome">${produto.nome}</h3>
-                <p class="produto-descricao">${produto.descricao}<br><strong class="produto-valor">${produto.valor}</strong></p>
+                <p class="produto-descricao">${descricaoResumida}</p>
+                <p class="produto-valor"><strong>${produto.valor}</strong></p>
                 <a href="${linkWhatsApp}" class="btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                     Falar no WhatsApp
                 </a>

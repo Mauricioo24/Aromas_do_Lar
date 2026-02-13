@@ -93,7 +93,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('/imagens/hero-candles-5Bn3B4rg.jpg');
+    background-image: url('/imagens/fundo_vela.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -264,7 +264,7 @@ section {
 
 .produto-valor {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--cor-texto);
 }
 
@@ -301,8 +301,15 @@ section {
 }
 
 .btn-whatsapp::before {
-    content: "💬";
-    font-size: 1.2rem;
+    content: "";
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.25rem;
+    background-image: url("imagens/whatsapp-icon-free-png.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Contato */
