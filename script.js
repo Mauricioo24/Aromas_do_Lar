@@ -75,6 +75,8 @@ const produtos = [
         valor: "R$ 119,90",
         imagens: [
             "/imagens/VelaNSpedra.webp",
+            "/imagens/VelaOratoria4.webp",
+            "/imagens/VelaOratoria5.webp",
         ]
     },
     {
@@ -85,6 +87,7 @@ const produtos = [
         valor: "R$ 89,90",
         imagens: [
             "/imagens/VelaNSpedraRefil.webp",
+            "/imagens/VelaRefil3.webp",
         ]
     },
     {
@@ -165,6 +168,28 @@ const produtos = [
         valor: "R$ 15,00",
         imagens: [
             "/imagens/aromaCarro.webp",
+        ]
+    },
+    {
+        id: 17,
+        nome: "Kit Vela oratória + Bandeja decorativa",
+        categoria: "kits",
+        descricao: "Ambas confeccionadas com acabamento em pedras, a vela trazendo a imagem de seu santo favorito como símbolo de fé, proteção e espiritualidade.",
+        valor: "R$ 169,80",
+        imagens: [
+            "/imagens/VelaOratoria.webp",
+            "/imagens/VelaOratoria2.webp",
+            "/imagens/VelaOratoria3.webp",
+        ]
+    },
+    {
+        id: 18,
+        nome: "Bandeja decorativa",
+        categoria: "decorativos",
+        descricao: "Bandeja decorativa artesanal em pedras naturais, com design elegante e minimalista. Perfeita para organizar perfumes, velas ou pequenos objetos, trazendo charme e sofisticação para qualquer ambiente.",
+        valor: "R$ 59,90",
+        imagens: [
+            "/imagens/Bandeja.webp",
         ]
     }
 ];
