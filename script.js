@@ -86,8 +86,8 @@ const produtos = [
         descricao: "Vela oratória refil confeccionada com acabamento em pedras, trazendo a imagem de seu santo favorito como símbolo de fé, proteção e espiritualidade. Ideal para ambientes de oração, decoração ou para presentear.",
         valor: "R$ 89,90",
         imagens: [
-            "/imagens/VelaNSpedraRefil.webp",
             "/imagens/VelaRefil3.webp",
+            "/imagens/VelaNSpedraRefil.webp",
         ]
     },
     {
