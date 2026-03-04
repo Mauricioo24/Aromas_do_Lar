@@ -191,6 +191,26 @@ const produtos = [
         imagens: [
             "/imagens/Bandeja.webp",
         ]
+    },
+    {
+        id: 19,
+        nome: "Kit Aromatizador + Sabonete Líquido",
+        categoria: "kits",
+        descricao: "Kit Aromatizador + Sabonete Líquido.",
+        valor: "R$ 90,00",
+        imagens: [
+            "/imagens/kitAromatizador.jpg",
+        ]
+    },
+    {
+        id: 20,
+        nome: "Água de lençóis",
+        categoria: "aromatizantes",
+        descricao: "Água de lençóis, aromatizada com o aroma que você desejar.",
+        valor: "R$ 35,00",
+        imagens: [
+            "/imagens/AguaLencois.jpg",
+        ]
     }
 ];
 
