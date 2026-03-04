@@ -199,7 +199,7 @@ const produtos = [
         descricao: "Kit Aromatizador + Sabonete Líquido.",
         valor: "R$ 90,00",
         imagens: [
-            "/imagens/kitAromatizador.jpg",
+            "/imagens/KitAromatizador.jpg",
         ]
     },
     {
