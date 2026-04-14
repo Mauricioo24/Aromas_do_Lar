@@ -105,7 +105,7 @@ const produtos = [
         nome: "Sagrada família de gesso decorada",
         categoria: "religiosos",
         descricao: "Vela especial dedicada à padroeira do Brasil, Nossa Senhora Aparecida, para momentos de fé e gratidão.",
-        valor: "R$ 19,90",
+        valor: "R$ 19,90 - 29,90",
         imagens: [
             "/imagens/sagradafamiliaSgesso.webp",
         ]
@@ -205,11 +205,21 @@ const produtos = [
     {
         id: 20,
         nome: "Água de lençóis",
-        categoria: "aromatizantes",
+        categoria: "religiosos",
         descricao: "Água de lençóis, aromatizada com o aroma que você desejar.",
         valor: "R$ 35,00",
         imagens: [
             "/imagens/AguaLencois.jpg",
+        ]
+    },
+    {
+        id: 21,
+        nome: "Mini vela de nossa senhora aparecida",
+        categoria: "aromatizantes",
+        descricao: "Perfeita para presentear. Disponível em vários aromas.",
+        valor: "R$ 12,00",
+        imagens: [
+            "/imagens/velaNSmini.webp",
         ]
     }
 ];
