@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromas do Lar - Painel Administrativo</title>
+    <link rel="icon" href="imagens/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <div class="container admin-header-conteudo">
+            <h1 class="admin-logo">Aromas do Lar <span>Admin</span></h1>
+            <div class="admin-header-acoes">
+                <a href="index.html" class="admin-link-site" target="_blank" rel="noopener noreferrer">Ver site ↗</a>
+                <button id="btn-sair" class="btn-secundario">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="admin-tabs">
+        <div class="container admin-tabs-conteudo">
+            <button class="admin-tab active" data-aba="produtos">Produtos</button>
+            <button class="admin-tab" data-aba="categorias">Categorias</button>
+            <button class="admin-tab" data-aba="config">Configurações</button>
+        </div>
+    </nav>
+
+    <main class="container admin-main">
+        <div id="admin-aviso" class="admin-aviso" hidden></div>
+
+        <!-- Aba: Produtos -->
+        <section id="aba-produtos" class="admin-aba">
+            <div class="admin-aba-toolbar">
+                <h2>Produtos</h2>
+                <button id="btn-novo-produto" class="btn-primary">+ Novo produto</button>
+            </div>
+            <div id="lista-produtos" class="admin-lista">
+                <p class="admin-carregando">Carregando produtos…</p>
+            </div>
+        </section>
+
+        <!-- Aba: Categorias -->
+        <section id="aba-categorias" class="admin-aba" hidden>
+            <div class="admin-aba-toolbar">
+                <h2>Categorias</h2>
+                <button id="btn-nova-categoria" class="btn-primary">+ Nova categoria</button>
+            </div>
+            <div id="lista-categorias" class="admin-lista">
+                <p class="admin-carregando">Carregando categorias…</p>
+            </div>
+        </section>
+
+        <!-- Aba: Configurações -->
+        <section id="aba-config" class="admin-aba" hidden>
+            <div class="admin-aba-toolbar">
+                <h2>Configurações do site</h2>
+            </div>
+            <form id="form-config" class="admin-form admin-form-config">
+                <label for="cfg-whatsapp">Número do WhatsApp (só números, com DDI e DDD)</label>
+                <input type="text" id="cfg-whatsapp" name="whatsapp" placeholder="5511999999999">
+
+                <label for="cfg-instagram">Link do Instagram</label>
+                <input type="text" id="cfg-instagram" name="instagram" placeholder="https://www.instagram.com/...">
+
+                <label for="cfg-hero-titulo">Título de destaque (início do site)</label>
+                <input type="text" id="cfg-hero-titulo" name="hero_titulo">
+
+                <label for="cfg-hero-texto">Texto de apresentação (início do site)</label>
+                <textarea id="cfg-hero-texto" name="hero_texto" rows="5"></textarea>
+
+                <label for="cfg-footer-texto">Texto do rodapé</label>
+                <input type="text" id="cfg-footer-texto" name="footer_texto">
+
+                <button type="submit" class="btn-primary">Salvar configurações</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Modal genérico (formulário de produto / categoria) -->
+    <div id="modal" class="modal" hidden>
+        <div class="modal-fundo" id="modal-fundo"></div>
+        <div class="modal-conteudo">
+            <button type="button" id="modal-fechar" class="modal-fechar" aria-label="Fechar">×</button>
+            <div id="modal-corpo"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aromas do Lar - Acesso Administrativo</title>
+    <link rel="icon" href="imagens/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+    <div class="login-card">
+        <h1 class="login-titulo">Aromas do Lar</h1>
+        <p class="login-subtitulo">Acesso administrativo</p>
+
+        <form id="form-login" class="login-form">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" autocomplete="current-password" required autofocus>
+            <p id="login-erro" class="login-erro" hidden></p>
+            <button type="submit" class="btn-primary">Entrar</button>
+        </form>
+
+        <a href="index.html" class="login-voltar">← Voltar ao site</a>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

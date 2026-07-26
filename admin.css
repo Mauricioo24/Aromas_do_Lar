@@ -1,0 +1,455 @@
+/* Painel administrativo — reaproveita as variáveis de cor/tipografia de styles.css */
+
+/* ---------- Login ---------- */
+.login-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-off-white);
+    padding: var(--espaco-md);
+}
+
+.login-card {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-areia);
+    border-radius: 8px;
+    padding: var(--espaco-xl) var(--espaco-lg);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.login-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    color: var(--cor-texto);
+}
+
+.login-subtitulo {
+    color: var(--cor-texto-suave);
+    margin-bottom: var(--espaco-lg);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-sm);
+    text-align: left;
+}
+
+.login-form label {
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+}
+
+.login-form input {
+    padding: 0.75rem;
+    border: 1px solid var(--cor-areia);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--fonte-texto);
+}
+
+.login-form .btn-primary {
+    border: none;
+    cursor: pointer;
+    margin-top: var(--espaco-xs);
+}
+
+.login-erro {
+    color: #B3261E;
+    font-size: 0.9rem;
+}
+
+.login-voltar {
+    display: inline-block;
+    margin-top: var(--espaco-lg);
+    color: var(--cor-texto-suave);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-voltar:hover {
+    color: var(--cor-destaque);
+}
+
+/* ---------- Layout geral do admin ---------- */
+.admin-body {
+    background-color: var(--cor-off-white);
+    min-height: 100vh;
+}
+
+.admin-header {
+    background-color: var(--cor-branco);
+    border-bottom: 1px solid var(--cor-areia);
+    padding: var(--espaco-sm) 0;
+}
+
+.admin-header-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espaco-sm);
+}
+
+.admin-logo {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+}
+
+.admin-logo span {
+    color: var(--cor-destaque);
+    font-weight: 600;
+}
+
+.admin-header-acoes {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-md);
+}
+
+.admin-link-site {
+    color: var(--cor-texto-suave);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.admin-link-site:hover {
+    color: var(--cor-destaque);
+}
+
+.btn-secundario,
+.btn-perigo,
+.btn-icone {
+    font-family: var(--fonte-texto);
+    border: 1px solid var(--cor-areia);
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-secundario:hover {
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+}
+
+.btn-perigo {
+    color: #B3261E;
+    border-color: #E9BDB8;
+}
+
+.btn-perigo:hover {
+    background-color: #FBEAE8;
+}
+
+.btn-icone {
+    padding: 0.4rem 0.6rem;
+    line-height: 1;
+}
+
+.admin-tabs {
+    background-color: var(--cor-branco);
+    border-bottom: 1px solid var(--cor-areia);
+}
+
+.admin-tabs-conteudo {
+    display: flex;
+    gap: var(--espaco-sm);
+}
+
+.admin-tab {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--espaco-sm) var(--espaco-xs);
+    font-size: 1rem;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+}
+
+.admin-tab.active {
+    color: var(--cor-texto);
+    border-bottom-color: var(--cor-destaque);
+    font-weight: 600;
+}
+
+.admin-main {
+    padding: var(--espaco-lg) var(--espaco-md);
+}
+
+.admin-aviso {
+    padding: var(--espaco-sm) var(--espaco-md);
+    border-radius: 4px;
+    margin-bottom: var(--espaco-md);
+    font-size: 0.95rem;
+}
+
+.admin-aviso-erro {
+    background-color: #FBEAE8;
+    color: #B3261E;
+    border: 1px solid #E9BDB8;
+}
+
+.admin-aviso-sucesso {
+    background-color: #E7F5EA;
+    color: #1E7A34;
+    border: 1px solid #BEE3C6;
+}
+
+.admin-aba-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--espaco-md);
+    flex-wrap: wrap;
+    gap: var(--espaco-sm);
+}
+
+.admin-aba-toolbar h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.admin-carregando,
+.admin-vazio {
+    color: var(--cor-texto-suave);
+    padding: var(--espaco-md);
+    text-align: center;
+}
+
+/* ---------- Listas (produtos / categorias) ---------- */
+.admin-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-sm);
+}
+
+.admin-item {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-areia);
+    border-radius: 8px;
+    padding: var(--espaco-sm) var(--espaco-md);
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-md);
+}
+
+.admin-item.inativo {
+    opacity: 0.55;
+}
+
+.admin-item-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 6px;
+    object-fit: cover;
+    background-color: var(--cor-bege-claro);
+    flex-shrink: 0;
+}
+
+.admin-item-info {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.admin-item-nome {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.admin-item-meta {
+    color: var(--cor-texto-suave);
+    font-size: 0.875rem;
+    margin-top: 0.15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    background-color: var(--cor-creme);
+    color: var(--cor-texto-suave);
+}
+
+.badge-inativo {
+    background-color: #F0E4E4;
+    color: #8A4A44;
+}
+
+.badge-destaque {
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+}
+
+.admin-item-ordem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.admin-item-acoes {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+/* ---------- Formulários (modal e configurações) ---------- */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    max-width: 560px;
+}
+
+.admin-form label {
+    font-size: 0.875rem;
+    color: var(--cor-texto-suave);
+    margin-top: var(--espaco-xs);
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form input[type="password"],
+.admin-form select,
+.admin-form textarea {
+    padding: 0.65rem;
+    border: 1px solid var(--cor-areia);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: var(--fonte-texto);
+    width: 100%;
+}
+
+.admin-form textarea {
+    resize: vertical;
+}
+
+.admin-form-checkboxes {
+    display: flex;
+    gap: var(--espaco-md);
+    margin-top: var(--espaco-xs);
+}
+
+.admin-form-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--cor-texto);
+}
+
+.admin-form-imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.admin-form-imagem-linha {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.admin-form-imagem-linha input {
+    flex-grow: 1;
+}
+
+.admin-form .btn-primary,
+.admin-form .btn-secundario {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    margin-top: var(--espaco-sm);
+}
+
+.admin-form .btn-secundario {
+    border: 1px solid var(--cor-areia);
+}
+
+.admin-form-config {
+    max-width: 640px;
+}
+
+.admin-form-erro {
+    color: #B3261E;
+    font-size: 0.875rem;
+}
+
+/* ---------- Modal ---------- */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--espaco-lg) var(--espaco-md);
+    overflow-y: auto;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-fundo {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-conteudo {
+    position: relative;
+    background-color: var(--cor-branco);
+    border-radius: 8px;
+    padding: var(--espaco-lg);
+    max-width: 560px;
+    width: 100%;
+    z-index: 1;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: var(--espaco-sm);
+    right: var(--espaco-sm);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--cor-texto-suave);
+}
+
+.modal-fechar:hover {
+    color: var(--cor-texto);
+}
+
+.modal-corpo h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    margin-bottom: var(--espaco-md);
+}
+
+@media (max-width: 640px) {
+    .admin-item {
+        flex-wrap: wrap;
+    }
+
+    .admin-item-acoes {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

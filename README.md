@@ -17,9 +17,13 @@ Site de catálogo digital elegante e funcional para loja de velas aromáticas e 
 - `index.html` / `produto.html` - Páginas do site
 - `styles.css` - Estilos e design visual
 - `script.js` - Funcionalidades JavaScript (carrega o catálogo via `/api/catalogo`)
-- `api/` - Vercel Functions que leem/gravam no Postgres (Neon)
+- `login.html` / `admin.html` - Painel administrativo
+- `admin.js` / `admin.css` - Lógica e estilo do painel administrativo
+- `api/` - Vercel Functions (catálogo público em `api/catalogo.js`,
+  autenticação em `api/login.js`/`api/_auth.js`, CRUD em `api/admin/`)
 - `scripts/schema.sql` - Definição das tabelas do banco
 - `scripts/seed.mjs` - Popula o banco com os produtos e textos iniciais
+- `scripts/gerar-hash-senha.mjs` - Gera o hash para `ADMIN_PASSWORD_HASH`
 - `imagens/` - Fotos dos produtos
 - `README.md` - Este arquivo
 
@@ -55,23 +59,52 @@ foi adicionada uma pasta `api/` com Vercel Functions que leem do Postgres.
 6. **Deploy**: `git push` como sempre — a Vercel builda e usa a mesma
    `DATABASE_URL` de produção.
 
-### Alterar Número do WhatsApp, Instagram e textos
-
-Depois que o painel de admin estiver pronto, isso será feito por lá. Até
-lá, pode editar direto na tabela `config` do Neon (chaves: `whatsapp`,
-`instagram`, `hero_titulo`, `hero_texto`, `footer_texto`).
-
-### Adicionar ou Editar Produtos
-
-Mesma ideia: por enquanto, direto na tabela `produtos` do Neon (SQL Editor)
-ou reeditando `scripts/seed.mjs` e rodando `npm run seed` de novo. O CRUD
-pelo admin está no roadmap.
-
 ### Adicionar Imagens de Produtos Novos
 
 Por enquanto, coloque o arquivo em `imagens/` e referencie o caminho
-(`/imagens/arquivo.webp`) no campo `imagens` do produto. Upload direto pelo
-admin (Vercel Blob) está no roadmap.
+(`/imagens/arquivo.webp`) no campo de imagens do produto, pelo admin (abaixo).
+Upload direto de arquivo pelo admin (Vercel Blob) está no roadmap.
+
+## Painel Administrativo
+
+Acesse `/login.html` (ex: `https://seu-site.vercel.app/login.html`) para
+gerenciar produtos, categorias e os textos do site (WhatsApp, Instagram,
+hero, rodapé) sem mexer em código ou no banco diretamente.
+
+### Setup (uma vez só)
+
+1. **Escolha uma senha e gere o hash** (o admin não guarda a senha em texto
+   puro, só o hash SHA-256 dela):
+   ```bash
+   node scripts/gerar-hash-senha.mjs "sua-senha-aqui"
+   ```
+2. **Configure as variáveis de ambiente** no painel da Vercel (Settings →
+   Environment Variables), em Production, Preview e Development:
+   - `ADMIN_PASSWORD_HASH` — o hash gerado no passo 1
+   - `SESSION_SECRET` — uma string aleatória longa, só para assinar o cookie
+     de sessão (pode gerar uma com `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`)
+3. **Puxe as variáveis para local** (se for testar com `vercel dev`):
+   ```bash
+   vercel env pull .env.local
+   ```
+
+### Uso
+
+- Login em `/login.html`, senha do passo 1. A sessão dura 7 dias (cookie
+  `HttpOnly`, assinado, não fica acessível via JavaScript).
+- **Produtos**: criar, editar, ocultar/mostrar no site (sem excluir),
+  reordenar (setas ↑↓) e excluir.
+- **Categorias**: criar, editar, ocultar, reordenar. Não é possível excluir
+  uma categoria que ainda tem produtos — mova-os primeiro.
+- **Configurações**: WhatsApp, Instagram e os textos do início/rodapé do
+  site, refletindo no `index.html` na próxima visita (cache de até 60s).
+- **Sair** desconecta a sessão.
+
+Segurança: há um limite simples de tentativas de login por IP (10 a cada 15
+minutos). Ele reseta a cada "cold start" da função serverless — não é uma
+proteção robusta contra força bruta, mas dificulta tentativas automatizadas
+básicas. Para algo mais forte no futuro, considere um serviço dedicado
+(ex: Vercel WAF/Firewall).
 
 ## Como Usar
 
