@@ -8,22 +8,37 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navegação -->
-    <nav class="navbar">
+    <header class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
-                <a href="index.html#inicio" class="logo" style="text-decoration: none;">Aromas do Lar</a>
-                <div class="nav-links">
-                    <a href="index.html#inicio" class="nav-link">Início</a>
-                    <a href="index.html#catalogo" class="nav-link">Catálogo</a>
-                    <a href="index.html#contato" class="nav-link">Contato</a>
-                </div>
+                <a href="index.html#inicio" class="logo" aria-label="Aromas do Lar - página inicial">
+                    <img class="logo-img" src="imagens/logo.jpg" alt="" width="42" height="42">
+                    <span class="logo-text">Aromas do Lar</span>
+                </a>
+
+                <button class="nav-toggle" id="nav-toggle" type="button"
+                        aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav-toggle-barra"></span>
+                    <span class="nav-toggle-barra"></span>
+                    <span class="nav-toggle-barra"></span>
+                </button>
+
+                <nav class="nav-menu" id="nav-menu" aria-label="Menu principal">
+                    <div class="nav-links">
+                        <a href="index.html#inicio" class="nav-link">Início</a>
+                        <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+                        <a href="index.html#contato" class="nav-link">Contato</a>
+                    </div>
+                    <a href="https://wa.me/5511995618384?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Aromas%20do%20Lar."
+                       class="nav-cta" id="link-whatsapp-nav" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+                </nav>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Detalhes do Produto -->
     <section class="produto-detalhe-section">

@@ -143,21 +143,87 @@ function aplicarConfiguracoes() {
     const footerTexto = document.getElementById("footer-texto");
     if (footerTexto && config.footer_texto) footerTexto.textContent = config.footer_texto;
 
-    const linkWhatsappContato = document.getElementById("link-whatsapp-contato");
-    if (linkWhatsappContato) {
-        const mensagem = encodeURIComponent(
-            "Olá! Gostaria de saber mais sobre os produtos da Aromas do Lar."
-        );
-        linkWhatsappContato.href = `https://wa.me/${obterNumeroWhatsapp()}?text=${mensagem}`;
-    }
+    const mensagemGeral = encodeURIComponent(
+        "Olá! Gostaria de saber mais sobre os produtos da Aromas do Lar."
+    );
+    const linkGeral = `https://wa.me/${obterNumeroWhatsapp()}?text=${mensagemGeral}`;
+
+    ["link-whatsapp-contato", "link-whatsapp-nav", "link-whatsapp-hero"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.href = linkGeral;
+    });
 
     const linkInstagram = document.getElementById("link-instagram");
     if (linkInstagram && config.instagram) linkInstagram.href = config.instagram;
 }
 
+// Cabeçalho: menu mobile, sombra ao rolar e link ativo (todas as páginas)
+function inicializarHeader() {
+    const navbar = document.getElementById("navbar");
+    const toggle = document.getElementById("nav-toggle");
+    const menu = document.getElementById("nav-menu");
+
+    function fecharMenu() {
+        if (!menu || !toggle) return;
+        menu.classList.remove("nav-aberto");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Abrir menu");
+    }
+
+    if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+            const aberto = menu.classList.toggle("nav-aberto");
+            toggle.setAttribute("aria-expanded", String(aberto));
+            toggle.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+        });
+
+        // Fecha ao clicar em um item, ao apertar Esc ou ao voltar para desktop
+        menu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", fecharMenu);
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") fecharMenu();
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) fecharMenu();
+        });
+    }
+
+    if (navbar) {
+        const atualizarSombra = () => {
+            navbar.classList.toggle("navbar-scrolled", window.scrollY > 8);
+        };
+        atualizarSombra();
+        window.addEventListener("scroll", atualizarSombra, { passive: true });
+    }
+
+    // Destaca no menu a seção visível na tela
+    const secoes = Array.from(document.querySelectorAll("section[id]"));
+    const links = Array.from(document.querySelectorAll(".nav-link[href*='#']"));
+
+    if (secoes.length && links.length && "IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    links.forEach((link) => {
+                        const alvo = (link.getAttribute("href") || "").split("#")[1];
+                        link.classList.toggle("active", alvo === entry.target.id);
+                    });
+                });
+            },
+            { rootMargin: "-45% 0px -50% 0px" }
+        );
+
+        secoes.forEach((secao) => observer.observe(secao));
+    }
+}
+
 // Função para scroll suave nos links de navegação (todas as páginas)
 function inicializarNavegacao() {
-    const navLinks = document.querySelectorAll(".nav-link");
+    const navLinks = document.querySelectorAll(".nav-link, .hero-scroll");
 
     navLinks.forEach((link) => {
         link.addEventListener("click", function (e) {
@@ -169,7 +235,9 @@ function inicializarNavegacao() {
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
-                    const offsetTop = targetElement.offsetTop - 80; // Compensa a altura da navbar
+                    const navbar = document.getElementById("navbar");
+                    const alturaNavbar = navbar ? navbar.offsetHeight : 76;
+                    const offsetTop = targetElement.offsetTop - alturaNavbar - 8;
                     window.scrollTo({
                         top: offsetTop,
                         behavior: "smooth",
@@ -336,7 +404,8 @@ function mostrarErroCarregamento(erro) {
 
 // Inicialização quando o DOM estiver carregado
 document.addEventListener("DOMContentLoaded", async function () {
-    // Navegação suave funciona mesmo se o catálogo falhar (todas as páginas)
+    // Cabeçalho e navegação funcionam mesmo se o catálogo falhar (todas as páginas)
+    inicializarHeader();
     inicializarNavegacao();
 
     try {
