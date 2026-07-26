@@ -29,9 +29,9 @@
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="hero-title">Bem-vindo à Aromas do Lar</h2>
-                <p class="hero-text">
-                    Somos uma loja de aromas criada para quem valoriza bem-estar, aconchego e significado nos pequenos detalhes. 
+                <h2 class="hero-title" id="hero-titulo">Bem-vindo à Aromas do Lar</h2>
+                <p class="hero-text" id="hero-texto">
+                    Somos uma loja de aromas criada para quem valoriza bem-estar, aconchego e significado nos pequenos detalhes.
                     Reunimos uma infinidade de produtos desenvolvidos com cuidado artesanal e materiais selecionados.
                     Acreditamos que fragrâncias, intenções e experiências devem ser únicas, por isso nosso propósito é transformar ambientes e momentos, levando calma, acolhimento e espiritualidade para o seu dia a dia.
                 </p>
@@ -46,14 +46,9 @@
             <h2 class="section-title">Nosso Catálogo</h2>
             <p class="section-subtitle">Explore nossa seleção cuidadosa de velas aromáticas e religiosas</p>
 
-            <!-- Filtros de Categoria -->
-            <div class="categoria-filtros">
+            <!-- Filtros de Categoria (montados via JS a partir da API, ver inicializarFiltros em script.js) -->
+            <div class="categoria-filtros" id="categoria-filtros">
                 <button class="filtro-btn active" data-categoria="todos">Todos os Produtos</button>
-                <button class="filtro-btn" data-categoria="aromaticas">Velas Aromáticas</button>
-                <button class="filtro-btn" data-categoria="religiosos">Artigos Religiosos</button>
-                <button class="filtro-btn" data-categoria="kits">Kits Especiais</button>
-                <button class="filtro-btn" data-categoria="aromatizantes">Aromatizantes</button>
-                <button class="filtro-btn" data-categoria="corporal">Linha Corporal</button>
             </div>
 
             <!-- Grid de Produtos -->
@@ -69,16 +64,16 @@
             <h2 class="section-title">Entre em Contato</h2>
             <p class="section-subtitle">Estamos prontos para ajudar você a encontrar o produto perfeito</p>
             <div class="contato-opcoes">
-                <a href="https://wa.me/5511995618384?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Aromas%20do%20Lar." 
-                   class="btn-contato whatsapp" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5511995618384?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Aromas%20do%20Lar."
+                   class="btn-contato whatsapp" id="link-whatsapp-contato" target="_blank" rel="noopener noreferrer">
                     <span class="contato-icon"><img src="imagens/whatsapp-icon-free-png.webp" alt="WhatsApp" width="30" height="30"></span>
                     <span class="contato-text">
                         <strong>WhatsApp</strong>
                         <small>Fale conosco agora</small>
                     </span>
                 </a>
-                <a href="https://www.instagram.com/aromassdolar/" 
-                   class="btn-contato instagram" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/aromassdolar/"
+                   class="btn-contato instagram" id="link-instagram" target="_blank" rel="noopener noreferrer">
                     <span class="contato-icon"><img src="imagens/image.png" alt="Instagram" width="30" height="30"></span>
                     <span class="contato-text">
                         <strong>Instagram</strong>
@@ -93,7 +88,7 @@
     <footer class="footer">
         <div class="container">
             <p class="footer-text">© 2026 Aromas do Lar. Todos os direitos reservados.</p>
-            <p class="footer-text">Produtos artesanais feitos com carinho e dedicação.</p>
+            <p class="footer-text" id="footer-texto">Produtos artesanais feitos com carinho e dedicação.</p>
         </div>
     </footer>
 

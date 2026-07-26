@@ -1,0 +1,13 @@
+{
+  "name": "aromas-do-lar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Catálogo digital Aromas do Lar (site estático + API na Vercel)",
+  "type": "module",
+  "scripts": {
+    "seed": "node scripts/seed.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4"
+  }
+}
